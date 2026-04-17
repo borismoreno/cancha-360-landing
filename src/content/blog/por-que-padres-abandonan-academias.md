@@ -1,7 +1,8 @@
 ---
 title: "Por qué los padres abandonan las academias deportivas (y cómo evitarlo)"
 description: "La mayoría de los retiros no tienen que ver con el precio ni con el talento del jugador. Tienen que ver con la falta de información y la sensación de no ser tomados en cuenta."
-pubDate: 2025-04-10
+pubDate: 2026-04-10
+image: "/blog/padres-abandonan.jpg"
 category: "Gestión deportiva"
 readingTime: "7 min"
 ---

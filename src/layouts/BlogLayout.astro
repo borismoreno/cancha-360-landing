@@ -7,9 +7,10 @@ interface Props {
   pubDate: Date
   category: string
   readingTime: string
+  image?: string
 }
 
-const { title, description, pubDate, category, readingTime } = Astro.props
+const { title, description, pubDate, category, readingTime, image } = Astro.props
 
 const formattedDate = pubDate.toLocaleDateString('es-EC', {
   year: 'numeric',
@@ -30,9 +31,18 @@ const formattedDate = pubDate.toLocaleDateString('es-EC', {
       <p class="text-sm text-gray-500 mt-3">
         {formattedDate} · {readingTime} · <span class="text-gray-700 font-medium">Cancha360</span>
       </p>
-      <div class="bg-gray-100 rounded-2xl h-64 w-full mt-6 flex items-center justify-center text-gray-400 text-sm">
-        Imagen destacada
-      </div>
+      {image ? (
+        <img
+          src={image}
+          alt={title}
+          class="w-full h-64 object-cover rounded-2xl mt-6"
+          loading="lazy"
+        />
+      ) : (
+        <div class="bg-gray-100 rounded-2xl h-64 w-full mt-6 flex items-center justify-center text-gray-400 text-sm">
+          Sin Imagen
+        </div>
+      )}
     </header>
 
     <div class="prose prose-lg prose-a:text-primary max-w-none">

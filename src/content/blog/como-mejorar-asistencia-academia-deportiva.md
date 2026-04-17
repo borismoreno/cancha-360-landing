@@ -1,7 +1,8 @@
 ---
 title: "Cómo mejorar la asistencia en tu academia deportiva: 7 estrategias probadas"
 description: "La asistencia irregular destruye la progresión de tus jugadores y desmotiva a tus coaches. Aquí te explicamos por qué sucede y cómo revertirlo con estrategias concretas."
-pubDate: 2025-04-16
+pubDate: 2026-04-16
+image: "/blog/mejorar-asistencia.jpg"
 category: "Gestión deportiva"
 readingTime: "6 min"
 ---

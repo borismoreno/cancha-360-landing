@@ -1,7 +1,8 @@
 ---
 title: "Excel vs software especializado: qué necesita realmente tu academia deportiva"
 description: "Excel es gratis y flexible, pero tiene límites concretos cuando tu academia crece. Analizamos honestamente cuándo Excel es suficiente y cuándo necesitas una herramienta dedicada."
-pubDate: 2025-04-01
+pubDate: 2026-04-01
+image: "/blog/excel-vs-software.jpg"
 category: "Gestión deportiva"
 readingTime: "7 min"
 ---

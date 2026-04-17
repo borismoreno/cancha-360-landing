@@ -44,17 +44,50 @@ import SectionLabel from '../ui/SectionLabel.astro'
       </div>
     </div>
 
-    <!-- App mockup -->
     <div class="mt-16 flex justify-center relative">
-      <div class="relative">
-        <!-- Glow under phone -->
-        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-64 h-16 rounded-full blur-2xl" style="background: rgba(188,245,33,0.2);"></div>
-        <!-- Phone frame -->
-        <div class="relative bg-surface-high rounded-[2.5rem] border-4 border-surface-high shadow-2xl w-64 h-125 flex items-center justify-center overflow-hidden" style="box-shadow: 0 40px 80px rgba(0,0,0,0.6);">
-          <div class="w-full h-full bg-surface-low rounded-4xl flex items-center justify-center">
-            <span class="gradient-text font-display text-sm text-center px-4">Capturas de pantalla próximamente</span>
+      <div class="relative flex items-end justify-center" style="height: 520px; width: 100%; max-width: 600px; margin: 0 auto;">
+
+        <!-- Left phone — Equipos (behind, rotated left) -->
+        <div class="absolute" style="left: 0; bottom: 0; transform: rotate(-8deg) translateX(20px); z-index: 1; opacity: 0.85;">
+          <div class="relative rounded-4xl border-4 border-surface-high overflow-hidden shadow-2xl" style="width: 180px; box-shadow: 0 24px 48px rgba(0,0,0,0.6);">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-4 bg-surface-high rounded-b-xl z-10"></div>
+            <img
+              src="/screenshots/equipos.png"
+              alt="Gestión de equipos en Cancha360"
+              class="w-full h-auto block"
+              loading="lazy"
+            />
           </div>
         </div>
+
+        <!-- Center phone — Dashboard (front, no rotation) -->
+        <div class="relative" style="z-index: 3;">
+          <!-- Lime glow under center phone -->
+          <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 h-12 rounded-full blur-2xl" style="background: rgba(188,245,33,0.25);"></div>
+          <div class="relative rounded-[2.5rem] border-4 border-surface-high overflow-hidden" style="width: 220px; box-shadow: 0 40px 80px rgba(0,0,0,0.7);">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-5 bg-surface-high rounded-b-2xl z-10"></div>
+            <img
+              src="/screenshots/dashboard.png"
+              alt="Dashboard de Cancha360 — panel de control de academia deportiva"
+              class="w-full h-auto block"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+        <!-- Right phone — Asistencia (behind, rotated right) -->
+        <div class="absolute" style="right: 0; bottom: 0; transform: rotate(8deg) translateX(-20px); z-index: 1; opacity: 0.85;">
+          <div class="relative rounded-4xl border-4 border-surface-high overflow-hidden shadow-2xl" style="width: 180px; box-shadow: 0 24px 48px rgba(0,0,0,0.6);">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-4 bg-surface-high rounded-b-xl z-10"></div>
+            <img
+              src="/screenshots/asistencia.png"
+              alt="Control de asistencia en Cancha360"
+              class="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

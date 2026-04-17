@@ -23,9 +23,18 @@ const posts = (await getCollection('blog')).sort(
           href={`/blog/${post.id.replace(/\.md$/, '')}`}
           class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow cursor-pointer block"
         >
-          <div class="bg-gray-100 h-48 flex items-center justify-center text-gray-400 text-sm">
-            Imagen
-          </div>
+          {post.data.image ? (
+            <img
+              src={post.data.image}
+              alt={post.data.title}
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+          ) : (
+            <div class="bg-gray-100 h-48 flex items-center justify-center text-gray-400 text-sm">
+              Sin imagen
+            </div>
+          )}
           <div class="p-6">
             <span class="gradient-bg text-on-primary text-xs rounded-full px-3 py-1 font-semibold">
               {post.data.category}

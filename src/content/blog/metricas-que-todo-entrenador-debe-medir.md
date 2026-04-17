@@ -1,7 +1,8 @@
 ---
 title: "Las 5 métricas que todo entrenador de academia debe medir en sus jugadores"
 description: "Sin datos, el desarrollo deportivo es subjetivo y difícil de comunicar. Estas son las cinco métricas esenciales que todo entrenador debería registrar para evaluar el progreso real de sus atletas."
-pubDate: 2025-04-05
+pubDate: 2026-04-05
+image: "/blog/metricas-entrenador.jpg"
 category: "Entrenamiento"
 readingTime: "6 min"
 ---

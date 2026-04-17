@@ -1,7 +1,8 @@
 ---
 title: "Cómo comunicarte mejor con los padres de tus atletas"
 description: "La comunicación con padres es una de las habilidades más subestimadas en la gestión de academias deportivas. Aprende a estructurarla para construir confianza y reducir conflictos."
-pubDate: 2025-03-25
+pubDate: 2026-03-25
+image: "/blog/comunicarte-padres.jpg"
 category: "Gestión deportiva"
 readingTime: "6 min"
 ---
@@ -43,6 +44,7 @@ Estar disponible permanentemente parece un signo de compromiso, pero en realidad
 ### Define canales y horarios desde el primer día
 
 En la reunión de bienvenida a las familias —que debería ser obligatoria al inicio de cada ciclo— establece claramente:
+
 - Cuál es el canal oficial de comunicación (WhatsApp, email, plataforma)
 - En qué horario responderás mensajes (por ejemplo: lunes a viernes de 9am a 7pm)
 - Qué tipo de comunicaciones van por cada canal
