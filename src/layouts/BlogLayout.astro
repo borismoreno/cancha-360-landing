@@ -1,0 +1,59 @@
+---
+import BaseLayout from './BaseLayout.astro'
+
+interface Props {
+  title: string
+  description: string
+  pubDate: Date
+  category: string
+  readingTime: string
+}
+
+const { title, description, pubDate, category, readingTime } = Astro.props
+
+const formattedDate = pubDate.toLocaleDateString('es-EC', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+})
+---
+
+<BaseLayout title={`${title} — Cancha360 Blog`} description={description}>
+  <article class="max-w-2xl mx-auto px-6 py-16">
+    <header class="mb-10">
+      <span class="gradient-bg text-on-primary text-xs font-bold uppercase tracking-wider rounded-full px-3 py-1">
+        {category}
+      </span>
+      <h1 class="font-display text-4xl font-bold text-gray-900 mt-4 leading-tight">
+        {title}
+      </h1>
+      <p class="text-sm text-gray-500 mt-3">
+        {formattedDate} · {readingTime} · <span class="text-gray-700 font-medium">Cancha360</span>
+      </p>
+      <div class="bg-gray-100 rounded-2xl h-64 w-full mt-6 flex items-center justify-center text-gray-400 text-sm">
+        Imagen destacada
+      </div>
+    </header>
+
+    <div class="prose prose-lg prose-a:text-primary max-w-none">
+      <slot />
+    </div>
+
+    <div class="bg-surface-dark rounded-2xl p-8 text-center mt-16">
+      <h3 class="font-display text-xl font-bold text-white mb-3">
+        Gestiona tu academia con Cancha360
+      </h3>
+      <p class="text-on-surface-variant text-sm mb-6">
+        La plataforma que centraliza jugadores, equipos y padres en un solo lugar.
+      </p>
+      <a
+        href="https://wa.me/593992703156"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="gradient-bg text-on-primary font-semibold rounded-xl px-6 py-3 inline-block"
+      >
+        Solicitar acceso gratis
+      </a>
+    </div>
+  </article>
+</BaseLayout>

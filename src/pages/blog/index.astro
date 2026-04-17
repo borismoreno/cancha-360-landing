@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getCollection } from 'astro:content'
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+---
+
+<BaseLayout
+  title="Blog — Cancha360"
+  description="Recursos y guías para directores y entrenadores de academias deportivas en Latinoamérica."
+>
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <header class="text-center mb-14">
+      <h1 class="font-display text-4xl font-bold text-gray-900">Blog</h1>
+      <p class="text-gray-500 text-lg mt-3">Recursos para directores de academias deportivas</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {posts.map((post) => (
+        <a
+          href={`/blog/${post.id.replace(/\.md$/, '')}`}
+          class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow cursor-pointer block"
+        >
+          <div class="bg-gray-100 h-48 flex items-center justify-center text-gray-400 text-sm">
+            Imagen
+          </div>
+          <div class="p-6">
+            <span class="gradient-bg text-on-primary text-xs rounded-full px-3 py-1 font-semibold">
+              {post.data.category}
+            </span>
+            <h2 class="font-display font-bold text-gray-900 text-lg mt-3 leading-snug">
+              {post.data.title}
+            </h2>
+            <p class="text-sm text-gray-500 mt-2">
+              {post.data.pubDate.toLocaleDateString('es-EC', { year: 'numeric', month: 'long', day: 'numeric' })}
+              {' · '}{post.data.readingTime}
+            </p>
+            <p class="text-sm text-gray-600 mt-2 line-clamp-2">{post.data.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,10 @@
+---
+interface Props {
+  text: string;
+  dark?: boolean;
+}
+const { text, dark = false } = Astro.props;
+---
+<span class={dark ? 'section-label section-label-dark' : 'section-label'}>
+  {text}
+</span>

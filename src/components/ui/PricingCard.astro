@@ -1,0 +1,89 @@
+---
+interface Props {
+  plan: string
+  badge: string
+  price: number
+  annualPrice: number
+  priceNote?: string
+  features: string[]
+  ctaText: string
+  ctaHref: string
+  highlighted?: boolean
+}
+
+const { plan, badge, price, annualPrice, priceNote, features, ctaText, ctaHref, highlighted = false } = Astro.props
+---
+
+<div
+  class={`rounded-2xl p-8 relative overflow-hidden ${
+    highlighted
+      ? 'bg-surface-dark gradient-border'
+      : 'bg-white border border-gray-200'
+  }`}
+>
+  {highlighted && (
+    <span class="gradient-bg text-on-primary rounded-full px-3 py-1 text-xs font-bold absolute top-4 right-4">
+      MÁS POPULAR
+    </span>
+  )}
+
+  <span
+    class={`text-xs font-semibold rounded-full px-3 py-1 ${
+      highlighted ? 'bg-surface-high text-on-surface-variant' : 'bg-gray-100 text-gray-600'
+    }`}
+  >
+    {badge}
+  </span>
+
+  <div class="mt-4 mb-1">
+    <div class="flex items-end gap-1">
+      <span
+        class={`font-display text-4xl font-extrabold ${highlighted ? 'text-white' : 'text-gray-900'}`}
+        id={`price-${plan}`}
+      >
+        ${annualPrice}
+      </span>
+      <span class={`text-sm mb-1.5 ${highlighted ? 'text-on-surface-variant' : 'text-gray-500'}`}>/mes</span>
+    </div>
+    {priceNote && (
+      <p class={`text-sm mt-1 ${highlighted ? 'text-on-surface-variant' : 'text-gray-500'}`}>
+        {priceNote}
+      </p>
+    )}
+  </div>
+
+  <ul class="flex flex-col gap-2.5 mt-6 mb-8">
+    {features.map((f) => (
+      <li class="flex items-start gap-2.5 text-sm">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#bcf521"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="shrink-0 mt-0.5"
+        >
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        <span class={highlighted ? 'text-on-surface-variant' : 'text-gray-600'}>{f}</span>
+      </li>
+    ))}
+  </ul>
+
+  <a
+    href={ctaHref}
+    target="_blank"
+    rel="noopener noreferrer"
+    class={`w-full text-center rounded-xl px-6 py-3 font-semibold block transition-all duration-200 ${
+      highlighted
+        ? 'gradient-bg text-on-primary'
+        : 'border border-gray-200 text-gray-700 hover:border-primary hover:text-primary'
+    }`}
+  >
+    {ctaText}
+  </a>
+</div>

@@ -1,0 +1,65 @@
+---
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+  <div class="max-w-6xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2.5 text-decoration-none">
+      <!-- Hexagon SVG icon with lime-to-cyan gradient -->
+      <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
+        <defs>
+          <linearGradient id="hg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#bcf521"/>
+            <stop offset="100%" stop-color="#00f4fe"/>
+          </linearGradient>
+        </defs>
+        <path d="M50 5 L90 27.5 L90 72.5 L50 95 L10 72.5 L10 27.5 Z" stroke="url(#hg)" stroke-width="8" fill="none" stroke-linejoin="round"/>
+        <path d="M50 22 L75 36 L75 64 L50 78 L25 64 L25 36 Z" stroke="url(#hg)" stroke-width="5" fill="none" stroke-linejoin="round"/>
+      </svg>
+      <span style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 1.1rem; color: #1a1a1a;">Cancha360</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="/#caracteristicas" class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">Características</a>
+      <a href="/#precios" class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">Precios</a>
+      <a href="/blog" class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">Blog</a>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <div class="hidden md:flex items-center gap-3">
+      <a href="https://academias.cancha360.com" class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">Iniciar sesión</a>
+      <a href="https://wa.me/593992703156" target="_blank" class="btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.875rem;">Solicitar acceso</a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="menu-toggle" class="md:hidden p-2 text-gray-600" aria-label="Menú">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
+    <a href="/#caracteristicas" class="block text-sm text-gray-600 py-2 font-medium">Características</a>
+    <a href="/#precios" class="block text-sm text-gray-600 py-2 font-medium">Precios</a>
+    <a href="/blog" class="block text-sm text-gray-600 py-2 font-medium">Blog</a>
+    <a href="https://academias.cancha360.com" class="block text-sm text-gray-600 py-2 font-medium">Iniciar sesión</a>
+    <a href="https://wa.me/593992703156" target="_blank" class="btn-primary w-full justify-center mt-2">Solicitar acceso</a>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
